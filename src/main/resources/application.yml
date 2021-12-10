@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cookbook?serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 5000
+      idle-timeout: 180000
+      pool-name: beehive_statistic
+      connection-test-query: SELECT 1
+      data-source-properties:
+        cachePrepStmts: true
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+  jpa:
+    show-sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  redis:
+    database: 0
+    host: localhost
+    port: 7389
+    password: tanqin
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    connect-timeout: 1200
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  application:
+    name: cookbook-api
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:5000
+server:
+  port: 8080
+  servlet:
+    context-path: /cookbook
+logging:
+  logback:
+    rollingpolicy:
+      max-file-size: 20MB
+  file:
+    path: /cookbook/cookbook.log
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

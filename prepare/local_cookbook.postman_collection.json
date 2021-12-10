@@ -1,0 +1,679 @@
+{
+	"info": {
+		"_postman_id": "2dbb5a67-9514-40c1-96b8-504e1a8885d6",
+		"name": "local_cookbook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "查看所有菜的类别",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/cat/category",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"cat",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "搜索",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/source?key=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"source"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": ""
+						}
+					]
+				},
+				"description": "- key 关键字"
+			},
+			"response": []
+		},
+		{
+			"name": "查看所有的菜",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/show",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "某类别下的所有菜",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/show/dish/category?category=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"show",
+						"dish",
+						"category"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": ""
+						}
+					]
+				},
+				"description": "- category 菜的类别"
+			},
+			"response": []
+		},
+		{
+			"name": "当前用户信息",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/user/info",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"user",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改用户基本信息",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "img",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/cookbook/put/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"put",
+						"user"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "age",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "img",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "- name 用户昵称\n- age 年纪\n- img 用户头像"
+			},
+			"response": []
+		},
+		{
+			"name": "查看我添加的菜",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/mydishes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"mydishes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查看收藏菜",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/collect/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"collect",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改一道菜",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "dishName",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "descript",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "dishImg",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "material",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "count",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stepText",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stepImg",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/cookbook/put/dish/id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"put",
+						"dish",
+						"id"
+					]
+				},
+				"description": "- id 菜的id\n- dishName 菜的名字\n- category 菜的类型\n- descript 菜的描述\n- dishImg 菜的图片\n\n- material 菜的原料\n- count 对应原料的数量\n\n- stepText 菜的步骤描述\n- stepImg 菜的步骤图片\n\n**基本事项**\n1. material对应count\n2. stepText对应stepImg\n3. 四个参数都为数组型。请求时参数都至少有一个，可以有多个。\n\n**警告事项**\n1. 使用本接口前建议先调用\"菜的具体信息\"接口填充预备数据。\n2.\n本接口，在请求数据比原数据少的情况下，可能造成原数据部分数据缺失。\n3.\n本接口默认需要提交，菜的全部信息"
+			},
+			"response": []
+		},
+		{
+			"name": "上传一道菜的基本信息",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "img",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "descript",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/cookbook/upload/dish/name",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"upload",
+						"dish",
+						"name"
+					]
+				},
+				"description": "- name 菜的名字\n- img 菜的图片\n- descript 菜的描述\n- category 菜的类别"
+			},
+			"response": []
+		},
+		{
+			"name": "上传一道菜详细信息",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "material",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "count",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "count",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stepText",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stepImg",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "stepText",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stepImg",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "stepText",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "stepImg",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/cookbook/upload/dish/method",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"upload",
+						"dish",
+						"method"
+					]
+				},
+				"description": "- material 菜的原料\n- count 菜的原料数量\n- stepText 步骤文字\n- stepImg 步骤图片\n\n**注意事项**\n1. material对应count\n2. stepText对应stepImg\n3. 四个参数都为数组型。请求时参数都至少有一个，可以有多个。"
+			},
+			"response": []
+		},
+		{
+			"name": "登录-发送验证码",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/phone-login/send?phone=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"phone-login",
+						"send"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": ""
+						},
+						{
+							"key": null,
+							"value": "593446",
+							"disabled": true
+						}
+					]
+				},
+				"description": "- phone 手机号"
+			},
+			"response": []
+		},
+		{
+			"name": "登录-验证码检测",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/phone-login/verification?phone=&code=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"phone-login",
+						"verification"
+					],
+					"query": [
+						{
+							"key": "phone",
+							"value": ""
+						},
+						{
+							"key": "code",
+							"value": ""
+						}
+					]
+				},
+				"description": "- phone 手机号\n- code 验证码"
+			},
+			"response": []
+		},
+		{
+			"name": "收藏一道菜",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/collect/dish?dishId=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"collect",
+						"dish"
+					],
+					"query": [
+						{
+							"key": "dishId",
+							"value": ""
+						}
+					]
+				},
+				"description": "- dishId 菜的Id"
+			},
+			"response": []
+		},
+		{
+			"name": "添加评论",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "dishId",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "img",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/cookbook/comment/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"comment",
+						"add"
+					]
+				},
+				"description": "- dishId 菜的id\n- comment 评论文字\n- img 评论的图片\n\n**注意事项**\nimg 为可选参数"
+			},
+			"response": []
+		},
+		{
+			"name": "查看某道菜的具体信息",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/dish/detail?dishId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"dish",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "dishId",
+							"value": null
+						}
+					]
+				},
+				"description": "- dishId 菜的Id"
+			},
+			"response": []
+		},
+		{
+			"name": "批量删除菜",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/delete/dish?id=",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"delete",
+						"dish"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": ""
+						},
+						{
+							"key": "id",
+							"value": null,
+							"disabled": true
+						}
+					]
+				},
+				"description": "- id 菜的id\n**注意事项**\nid为数组型，参数至少出现一个，可以出现多个"
+			},
+			"response": []
+		},
+		{
+			"name": "批量删除评论",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/delete/comment?id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"delete",
+						"comment"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				},
+				"description": "- id 评论的id\n**注意事项**\nid为数组型，参数至少出现一个，可以出现多个"
+			},
+			"response": []
+		},
+		{
+			"name": "批量删除收藏",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/delete/collect?id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"delete",
+						"collect"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				},
+				"description": "- id 被收藏的菜的id\n**注意事项**\nid为数组型，参数至少出现一个，可以出现多个"
+			},
+			"response": []
+		},
+		{
+			"name": "actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cookbook/actuator/health",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cookbook",
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
