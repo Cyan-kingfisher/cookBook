@@ -1,4 +1,6 @@
-# Introduction: 菜谱应用的后端，无页面
+# 描述
+front-end and back-end separation of the back-end project of the development project <br>
+菜谱应用的后端，无页面。
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg)](https://www.apache.org/licenses/LICENSE-2.0.html)
 ![](https://img.shields.io/badge/technology-springboot-green)
 ![](https://img.shields.io/badge/technology-JPA-orange)
@@ -15,7 +17,7 @@
 4. Redis
 5. 阿里云短信服务
 
-# 功能
+## 功能
 
 1. 登录（只能使用手机号验证码登录）
 2. 搜索
